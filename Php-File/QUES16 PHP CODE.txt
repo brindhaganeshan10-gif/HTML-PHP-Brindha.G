@@ -1,0 +1,17 @@
+16. Write a PHP function that takes two numbers as input and returns the sum of those
+numbers. Display the result on the webpage, when a button is clicked.
+ANSWER
+<?php
+function addNumbers($a, $b) {
+    return $a + $b;
+}
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $num1 = (float)readline("Enter first number: ");
+    $num2 = (float)readline("Enter second number: ");
+    $sum = addNumbers($num1, $num2);
+    echo "The sum of $num1 and $num2 is: $sum\n";
+} else {
+    echo "Run this script in CLI (Command Line) to enter numbers.\n";
+}
+?>
