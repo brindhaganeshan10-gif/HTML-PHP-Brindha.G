@@ -1,0 +1,17 @@
+21. Construct a PHP function that checks if a given year is a leap year and returns true or
+false accordingly.
+answer
+<?php
+function isLeapYear($year) {
+    return ($year % 4 == 0 && $year % 100 != 0) || ($year % 400 == 0);
+}
+
+$year = 2024;
+echo $year . (isLeapYear($year) ? " is a Leap Year" : " is not a Leap Year");
+?>
+
+output
+2024 is a Leap Year
+
+
+=== Code Execution Successful ===

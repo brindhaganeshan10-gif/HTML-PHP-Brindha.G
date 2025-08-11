@@ -1,0 +1,14 @@
+29. Infer the usage of the following PHP functions:
+(i) rand() (ii) abs() (iii) strreplace() (iv) pi( ) (v) ceil()
+answer
+<?php
+echo rand(1, 100) . "<br>";   // random number
+echo abs(-50) . "<br>";       // absolute value
+echo str_replace("world", "PHP", "Hello world") . "<br>"; // replace
+echo pi() . "<br>";           // Pi value
+echo ceil(4.3) . "<br>";      // round up
+?>
+output
+47<br>50<br>Hello PHP<br>3.1415926535898<br>5<br>
+
+=== Code Execution Successful ===
