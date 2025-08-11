@@ -1,0 +1,36 @@
+7. Create a form which takes the name of the user as input and prints a greeting in the format
+given below and if the user submits the form with the name field blank, it prints an
+appropriate error message.
+
+Hello, Welcome to Everyone!
+Have a nice day!!/
+answer
+<?php
+$name = "";
+$error = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = trim($_POST['name']);
+    if ($name == "") {
+        $error = "Error: Name field cannot be blank.";
+    } else {
+        echo "Hello, Welcome to $name!<br>Have a nice day!!";
+        exit;
+    }
+}
+?>
+<form method="post">
+    Enter Name: <input type="text" name="name" value="<?php echo htmlspecialchars($name); ?>">
+    <input type="submit" value="Submit">
+</form>
+<?php
+if ($error) {
+    echo "<p style='color:red;'>$error</p>";
+}
+?>
+output
+arning: Undefined array key "REQUEST_METHOD" in /tmp/xomCXOT5i8/main.php on line 4
+<form method="post">
+    Enter Name: <input type="text" name="name" value="">
+    <input type="submit" value="Submit">
+</form>
+

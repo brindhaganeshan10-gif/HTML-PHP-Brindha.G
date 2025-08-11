@@ -1,0 +1,21 @@
+10. Develop a program to check student grades based on marks using a loop.
+ANSWER
+<?php
+$marks_array = [85, 65, 55, 35];
+
+foreach ($marks_array as $marks) {
+    if ($marks >= 75) {
+        echo "Marks: $marks → First Class<br>";
+    } elseif ($marks >= 60) {
+        echo "Marks: $marks → Second Class<br>";
+    } elseif ($marks >= 40) {
+        echo "Marks: $marks → Third Class<br>";
+    } else {
+        echo "Marks: $marks → Fail<br>";
+    }
+}
+?>
+OUTPUT
+Marks: 85 → First Class<br>Marks: 65 → Second Class<br>Marks: 55 → Third Class<br>Marks: 35 → Fail<br>
+
+=== Code Execution Successful ===

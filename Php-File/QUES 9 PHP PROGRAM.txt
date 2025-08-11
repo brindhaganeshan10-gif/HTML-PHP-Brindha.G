@@ -1,0 +1,18 @@
+9. Predict the output of the following snippet:
+$this = “this”; $that = “that”; $the_other = 2.2000000000;
+print(“$this,$not_set,$that+$the_other”);
+ANSWER
+<?php
+$this = "this";
+$that = "that";
+$the_other = 2.2;
+echo $this . ",," . ($that . ($the_other));
+?>
+
+OUTPUT
+ERROR!
+
+Fatal error: Cannot re-assign $this in /tmp/ir2LxhEzJ0/main.php on line 2
+
+
+=== Code Exited With Errors ===
