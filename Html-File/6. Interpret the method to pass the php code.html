@@ -1,0 +1,31 @@
+6. Interpret the method to pass the information between pages in PHP with an example.
+answer
+<?php
+session_start(); // Start session for SESSION method
+$_SESSION['session_name'] = "Session User"; // Store a session variable
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pass Data Between Pages</title>
+</head>
+<body>
+<h2>Passing Data Between Pages in PHP</h2>
+
+<!-- GET Method -->
+<h3>Using GET Method</h3>
+<a href="page2.php?name=John">Click to send name using GET</a><br><br>
+
+<!-- POST Method -->
+<h3>Using POST Method</h3>
+<form method="post" action="page2.php">
+    Enter Name: <input type="text" name="name" required>
+    <input type="submit" value="Send via POST">
+</form><br>
+
+<!-- SESSION Method -->
+<h3>Using SESSION</h3>
+<a href="page2.php">Click to use Session Data</a>
+
+</body>
+</html>
