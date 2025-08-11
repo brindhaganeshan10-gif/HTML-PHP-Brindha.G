@@ -1,0 +1,7 @@
+23. Prioritize the use of GET and POST arguments in PHP with a real time example.
+answer
+<!-- form.html -->
+<form method="GET" action="process.php">
+    Enter Name: <input type="text" name="username">
+    <input type="submit" value="Submit">
+</form>
