@@ -1,0 +1,33 @@
+50) Construct a PHP script to lower-case and upper-case, all elements in an array.
+&lt;?php
+$words = [&quot;Apple&quot;, &quot;BaNaNa&quot;, &quot;Cherry&quot;, &quot;MANGO&quot;];
+$lowercase = array_map(&#39;strtolower&#39;, $words);
+$uppercase = array_map(&#39;strtoupper&#39;, $words);
+echo &quot;Original Array: &quot; . implode(&quot;, &quot;, $words) . &quot;&lt;br&gt;&quot;;
+echo &quot;Lower-case Array: &quot; . implode(&quot;, &quot;, $lowercase) . &quot;&lt;br&gt;&quot;;
+echo &quot;Upper-case Array: &quot; . implode(&quot;, &quot;, $uppercase);
+?&gt;
+OUTPUT:
+Original Array: Apple, BaNaNa, Cherry, MANGO
+Lower-case Array: apple, banana, cherry, mango
+Upper-case Array: APPLE, BANANA, CHERRY, MANGO
+
+51) Differentiate between array_shift() and array_unshift() in PHP.
+&lt;?php
+$fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;];
+$first = array_shift($fruits);
+echo &quot;Removed Element: $first\n&quot;;
+print_r($fruits);
+?&gt;
+&lt;br&gt;
+&lt;?php
+
+$fruits = [&quot;banana&quot;, &quot;cherry&quot;];
+$count = array_unshift($fruits, &quot;apple&quot;, &quot;mango&quot;);
+
+echo &quot;New Array Size: $count\n&quot;;
+print_r($fruits);
+?&gt;
+OUTPUT:
+Removed Element: apple Array ([0] =&gt; banana[1] =&gt; cherry )
+New Array Size: 4 Array ([0] =&gt; apple[1] =&gt; mango[2] =&gt; banana[3] =&gt; cherry )
