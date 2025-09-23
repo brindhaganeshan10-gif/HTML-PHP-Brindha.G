@@ -1,0 +1,17 @@
+55) Develop a PHP script that uses stack functions to reverse a string.
+&lt;?php
+$string = &quot;HELLO&quot;;
+$chars = str_split($string);
+$stack = [];
+foreach ($chars as $ch) {
+array_push($stack, $ch);
+}
+$reversed = &quot;&quot;;
+while (!empty($stack)) {
+$reversed .= array_pop($stack);
+}
+echo &quot;Original String: $string\n&quot;;
+echo &quot;Reversed String: $reversed\n&quot;;
+?&gt;
+OUTPUT:
+Original String: HELLO Reversed String: OLLEH
