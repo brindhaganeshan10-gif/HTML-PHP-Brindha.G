@@ -1,0 +1,17 @@
+81. Create Admin Login, Logout form using session variables in PHP.
+
+&lt;?php
+// Admin login
+session_start();
+$_SESSION[&#39;admin&#39;] = &quot;Logged In&quot;;
+
+echo &quot;Admin login: &quot; . $_SESSION[&#39;admin&#39;];
+
+// Admin logout
+session_unset();
+session_destroy();
+echo &quot;Admin logged out.&quot;;
+?&gt;
+output:
+Admin login: Logged In
+Admin logged out.
