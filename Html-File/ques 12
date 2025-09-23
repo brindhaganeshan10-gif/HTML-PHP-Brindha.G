@@ -1,0 +1,26 @@
+12. Write a program to check student grade based on marks:
+Conditions:
+If marks are 75% or more, the grade will be First Class.
+If marks between 60% to 74%, grade will be second class.
+If marks between 40% to 59%, grade will be third class.
+If marks are less than 40%, students will be Fail.
+
+&lt;?php
+$marks = 68;
+
+echo &quot;Marks: $marks&quot;;
+echo &quot;Grade: &quot;;
+
+if ($marks &gt;= 75) {
+echo &quot;First Class&quot;;
+} elseif ($marks &gt;= 60 &amp;&amp; $marks &lt; 75) {
+echo &quot;Second Class&quot;;
+} elseif ($marks &gt;= 40 &amp;&amp; $marks &lt; 60) {
+
+echo &quot;Third Class&quot;;
+} else {
+echo &quot;Fail&quot;;
+}
+?&gt;
+
+output: Marks: 68Grade: Second Class
