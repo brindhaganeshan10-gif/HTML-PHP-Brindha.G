@@ -1,0 +1,8 @@
+57) Outline the Regular Expression with appropriate examples.
+&lt;?php
+$text = &quot;Alice and Bob went to New York&quot;;
+preg_match_all(&quot;/\b[A-Z][a-zA-Z]*\b/&quot;, $text, $matches);
+print_r($matches[0]);
+?&gt;
+OUTPUT:
+Array ([0] =&gt; Alice[1] =&gt; Bob[2] =&gt; New[3] =&gt; York )
