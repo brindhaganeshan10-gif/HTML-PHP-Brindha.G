@@ -1,0 +1,14 @@
+25. Construct a PHP script to replace the first ‘the’ of the following string with ‘best’. Data:
+
+“The Thing will come to you soon”
+
+&lt;?php
+$text = &quot;The Thing will come to you soon&quot;;
+// Replace first occurrence of &quot;The&quot; (case-sensitive)
+$result = preg_replace(&#39;/The/&#39;, &#39;Best&#39;, $text, 1);
+
+echo $result;
+?&gt;
+
+output:
+Best Thing will come to you soon
