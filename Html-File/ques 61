@@ -1,0 +1,8 @@
+61) Recall the steps to delete an element from an array?
+&lt;?php
+$x = [1, 2, 3, 4, 5];
+unset($x[2]);
+print_r($x);
+?&gt;
+OUTPUT:
+Array ([0] =&gt; 1[1] =&gt; 2[3] =&gt; 4[4] =&gt; 5 )
