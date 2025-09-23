@@ -1,0 +1,25 @@
+27. Articulate the mathematical operators with suitable examples in PHP.
+
+&lt;?php
+$a = 12;
+$b = 5;
+
+echo &quot;a = $a, b = $b\n&quot;;
+echo &quot;Addition (+): &quot; . ($a + $b) . &quot;\n&quot;;
+echo &quot;Subtraction (-): &quot; . ($a - $b) . &quot;\n&quot;;
+echo &quot;Multiplication (*): &quot; . ($a * $b) . &quot;\n&quot;;
+echo &quot;Division (/): &quot; . ($a / $b) . &quot;\n&quot;;
+echo &quot;Modulus (%): &quot; . ($a % $b) . &quot;\n&quot;;
+echo &quot;Exponentiation (**): &quot; . ($a ** $b) . &quot;\n&quot;;
+?&gt;
+
+output:
+
+a = 12, b = 5
+
+Addition (+): 17
+Subtraction (-): 7
+Multiplication (*): 60
+Division (/): 2.4
+Modulus (%): 2
+Exponentiation (**): 248832
