@@ -1,0 +1,10 @@
+77. Classify the various network functions which provide network information or functions.
+&lt;?php
+echo &quot;Network Functions in PHP:\n&quot;;
+echo &quot;gethostbyname() - Get the IP address of a host by name.\n&quot;;
+echo &quot;gethostbynamel() - Get all IP addresses of a host by name.\n&quot;;
+?&gt;
+output:
+Network Functions in PHP:
+gethostbyname() - Get the IP address of a host by name.
+gethostbynamel() - Get all IP addresses of a host by name.
