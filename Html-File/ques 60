@@ -1,0 +1,27 @@
+60) Write a PHP function to search a specified value within the values of an associative array.
+&lt;?php
+function searchValueInAssocArray($array, $searchValue) {
+$result = array_keys($array, $searchValue, true);
+if (!empty($result)) {
+return $result;
+} else {
+return null;
+}
+}
+
+$students = [
+&quot;101&quot; =&gt; &quot;Alice&quot;,
+&quot;102&quot; =&gt; &quot;Bob&quot;,
+&quot;103&quot; =&gt; &quot;Charlie&quot;,
+&quot;104&quot; =&gt; &quot;Bob&quot;
+];
+$search = &quot;Bob&quot;;
+$foundKeys = searchValueInAssocArray($students, $search);
+if ($foundKeys !== null) {
+echo &quot;Value &#39;$search&#39; found at keys: &quot; . implode(&quot;, &quot;, $foundKeys);
+} else {
+echo &quot;Value &#39;$search&#39; not found in the array.&quot;;
+}
+?&gt;
+OUTPUT:
+Value &#39;Bob&#39; found at keys: 102, 104
