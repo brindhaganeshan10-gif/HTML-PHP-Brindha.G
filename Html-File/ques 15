@@ -1,0 +1,32 @@
+15. Create a PHP program to compute the sum of the digits of a number.
+&lt;?php
+$number = 1234;
+$sum = 0;
+while ($number &gt; 0) {
+$digit = $number % 10;
+$sum += $digit;
+$number = (int)($number / 10);
+}
+echo &quot;Sum of digits is: &quot; . $sum;
+?&gt;
+
+output:Sum of digits is: 10
+
+16. Write a PHP function that takes two numbers as input and returns the sum of those
+numbers. Display the result on the webpage, when a button is clicked.
+
+&lt;?php
+function addNumbers($a, $b) {
+return $a + $b;
+}
+
+$num1 = 5;
+
+$num2 = 10;
+
+$sum = addNumbers($num1, $num2);
+echo &quot;Sum of $num1 and $num2 is: $sum&quot;;
+?&gt;
+
+output:
+Sum of 5 and 10 is: 15
