@@ -1,0 +1,15 @@
+23. Prioritize the use of GET and POST arguments in PHP with a real time example.
+
+&lt;?php
+// Simulating GET and POST without a form
+$_GET[&#39;color&#39;] = &quot;Blue&quot;;
+$_POST[&#39;name&#39;] = &quot;Dharani&quot;;
+
+echo &quot;GET: Your favorite color is &quot; . $_GET[&#39;color&#39;] . &quot;\n&quot;;
+echo &quot;POST: Hello, &quot; . $_POST[&#39;name&#39;] . &quot;!&quot;;
+
+?&gt;
+
+output:
+GET: Your favorite color is Blue
+POST: Hello, Dharani!
