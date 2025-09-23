@@ -1,0 +1,14 @@
+85. List the steps to get file name from a path in PHP.
+
+&lt;?php
+$path = &quot;/home/user/file.txt&quot;;
+$fileName = basename($path);
+echo &quot;File name from path: &quot; . $fileName;
+?&gt;
+
+File name from path: file.txt
+86. PHP File functions with example program.
+&lt;?php
+$file = fopen(&quot;sample.txt&quot;, &quot;w&quot;);
+fwrite($file, &quot;Hello, PHP file functions!&quot;);
+fclose($file);
