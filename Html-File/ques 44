@@ -1,0 +1,27 @@
+44) Develop a music playlist management system for a streaming service. The system should allow
+users to
+create, modify, and organize playlists. How would you use arrays and array functions to store and
+manipulate the song data and playlist information efficiently?
+&lt;?php
+$songs = array(&quot;Shape of You&quot;, &quot;Blinding Lights&quot;, &quot;Believer&quot;, &quot;Levitating&quot;);
+$playlist = array();
+array_push($playlist, $songs[0], $songs[2], $songs[3]);
+echo &quot;&lt;h3&gt;My Playlist&lt;/h3&gt;&quot;;
+foreach ($playlist as $song) {
+echo $song . &quot;&lt;br&gt;&quot;;
+}
+$key = array_search(&quot;Believer&quot;, $playlist);
+if ($key !== false) {
+unset($playlist[$key]);
+}
+echo &quot;&lt;h3&gt;Summary&lt;/h3&gt;&quot;;
+echo &quot;Total Songs: &quot; . count($playlist);
+?&gt;
+OUTPUT:
+My Playlist
+Shape of You
+Believer
+Levitating
+
+Summary
+Total Songs: 2
