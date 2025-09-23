@@ -1,0 +1,23 @@
+79. Create a PHP program to append two files in another file.
+
+&lt;?php
+$file1 = fopen(&quot;file1.txt&quot;, &quot;r&quot;);
+$file2 = fopen(&quot;file2.txt&quot;, &quot;r&quot;);
+$newFile = fopen(&quot;combined.txt&quot;, &quot;a&quot;);
+
+while($line = fgets($file1)){
+fwrite($newFile, $line);
+}
+
+while($line = fgets($file2)){
+fwrite($newFile, $line);
+}
+
+fclose($file1);
+fclose($file2);
+fclose($newFile);
+
+echo &quot;Files appended to combined.txt.&quot;;
+?&gt;
+output:
+Files appended to combined.txt.
