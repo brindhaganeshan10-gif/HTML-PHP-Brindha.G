@@ -1,0 +1,14 @@
+22. Create a PHP script that counts the number of occurrences of a specific word in a given
+string.
+
+&lt;?php
+$text = &quot;PHP is easy. PHP is powerful. I love PHP!&quot;;
+$word = &quot;PHP&quot;;
+
+$count = substr_count($text, $word);
+
+echo &quot;The word &#39;$word&#39; appears $count times.&quot;;
+?&gt;
+
+output:
+The word &#39;PHP&#39; appears 3 times.
