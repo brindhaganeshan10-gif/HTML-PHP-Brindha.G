@@ -1,0 +1,30 @@
+69) Build a PHP function to change the following array&#39;s all values to upper or lower case.
+
+Sample arrays :
+$Color = array(&#39;A&#39; =&gt; &#39;Blue&#39;, &#39;B&#39; =&gt; &#39;Green&#39;, &#39;c&#39; =&gt; &#39;Red&#39;);
+Expected Output :
+Values are in lower case.
+Array ( [A] =&gt; blue [B] =&gt; green [c] =&gt; red )
+Values are in upper case.
+Array ( [A] =&gt; BLUE [B] =&gt; GREEN [c] =&gt; RED )
+&lt;?php
+$Color = array(&#39;A&#39; =&gt; &#39;Blue&#39;, &#39;B&#39; =&gt; &#39;Green&#39;, &#39;c&#39; =&gt; &#39;Red&#39;);
+function arrayToLower($arr) {
+return array_map(&#39;strtolower&#39;, $arr);
+}
+function arrayToUpper($arr) {
+return array_map(&#39;strtoupper&#39;, $arr);
+}
+echo &quot;Values are in lower case.&lt;br&gt;&quot;;
+print_r(arrayToLower($Color));
+echo &quot;&lt;br&gt;&lt;br&gt;Values are in upper case.&lt;br&gt;&quot;;
+print_r(arrayToUpper($Color));
+?&gt;
+
+OUTPUT:
+Values are in lower case.
+
+Array ([A] =&gt; blue[B] =&gt; green[c] =&gt; red )
+
+Values are in upper case.
+Array ([A] =&gt; BLUE[B] =&gt; GREEN[c] =&gt; RED )
