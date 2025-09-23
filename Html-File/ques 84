@@ -1,0 +1,11 @@
+84. Implement a PHP program that creates sessions, sets values in sessions, and removes data from
+the sessions.
+
+&lt;?php
+session_start();
+$_SESSION[&quot;name&quot;] = &quot;Dharani&quot;;
+echo &quot;Session variable is set: &quot; . $_SESSION[&quot;name&quot;];
+?&gt;
+output:
+
+Session variable is set: Dharani
