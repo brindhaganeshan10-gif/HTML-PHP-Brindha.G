@@ -1,0 +1,15 @@
+88. Generate a simple PHP &#39;birthday countdown&#39; script, the script will count the number of days
+between current day and birthday.
+
+&lt;?php
+$birthday = &quot;2025-12-31&quot;;
+$currentDate = date(&quot;Y-m-d&quot;);
+
+$diff = strtotime($birthday) - strtotime($currentDate);
+$daysLeft = floor($diff / (60 * 60 * 24));
+
+echo &quot;Days left until birthday: &quot; . $daysLeft;
+?&gt;
+
+output:
+Days left until birthday: 365
