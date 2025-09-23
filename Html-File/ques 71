@@ -1,0 +1,12 @@
+71. Tell the different file handling modes available in PHP?
+&lt;?php
+$file = fopen(&quot;example.txt&quot;, &quot;r&quot;); // Read mode
+$file_write = fopen(&quot;example.txt&quot;, &quot;w&quot;); // Write mode
+$file_append = fopen(&quot;example.txt&quot;, &quot;a&quot;); // Append mode
+
+echo &quot;File handling modes in PHP are: \n&quot;;
+echo &quot;r = Read, w = Write, a = Append.&quot;;
+?&gt;
+OUTPUT:
+File handling modes in PHP are:
+r = Read, w = Write, a = Append.
