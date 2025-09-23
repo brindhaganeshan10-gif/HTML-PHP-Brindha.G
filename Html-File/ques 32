@@ -1,0 +1,19 @@
+32) Infer the result of the following PHP code?
+A)&lt;?php
+$mail = &quot;admin@example.com&quot;;
+$mail = str_replace(&quot;a&quot;,&quot;@&quot;,$mail);
+echo &quot;Contact me at $mail.&quot;;
+?&gt;
+OUTPUT:
+Contact me at @dmin@ex@mple.com.
+B)&lt;?php
+$names = array(&quot;alex&quot;, &quot;jean&quot;, &quot;emily&quot;, &quot;jane&quot;);
+$name = preg_grep(&quot;/^e/&quot;, $names);
+print_r($name);
+?&gt;
+
+OUTPUT:
+Array
+(
+[2] =&gt; emily
+)
