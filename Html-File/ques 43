@@ -1,0 +1,19 @@
+43) Develop a regular expression pattern that validates a password based on the following criteria:
+at least 8
+characters long, contains at least one uppercase letter, one lowercase letter, one digit, and one
+special
+character.
+&lt;?php
+$passwords = [&quot;Test@123&quot;, &quot;weakpass&quot;, &quot;NoSpecial123&quot;, &quot;StrongPass1$&quot;, &quot;Short1!&quot;];
+$pattern = &quot;/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&amp;])[A-Za-z\d@$!%*?&amp;]{8,}$/&quot;;
+foreach ($passwords as $pwd) {
+if (preg_match($pattern, $pwd)) {
+echo &quot;Password &#39;$pwd&#39; is VALID &lt;br&gt;&quot;;
+} else {
+echo &quot;Password &#39;$pwd&#39; is INVALID &lt;br&gt;&quot;;
+}
+}
+?&gt;
+OUTPUT:
+Password &#39;Test@123&#39; is VALID &lt;br&gt;Password &#39;weakpass&#39; is INVALID &lt;br&gt;Password &#39;NoSpecial123&#39; is
+INVALID &lt;br&gt;Password &#39;StrongPass1$&#39; is VALID &lt;br&gt;Password
