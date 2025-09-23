@@ -1,0 +1,12 @@
+75. Build a PHP function that takes the filename and a new line of content as input. Append the new
+line of content as a new line at the end of the file.
+
+&lt;?php
+function appendToFile($filename, $content){
+$file = fopen($filename, &quot;a&quot;);
+fwrite($file, $content . &quot;\n&quot;);
+fclose($file);
+}
+
+appendToFile(&quot;testfile.txt&quot;, &quot;New content&quot;);
+?&gt;
