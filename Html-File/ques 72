@@ -1,0 +1,19 @@
+72. Write the PHP program to implement the following session functions.
+(i)session_register() (ii) session_unset() (iii) session_destroy()
+
+&lt;?php
+// (i) session_register() - Deprecated in PHP 5.4.0. Use $_SESSION instead.
+session_start();
+$_SESSION[&quot;user&quot;] = &quot;Dharani&quot;;
+
+// (ii) session_unset() - Unsets all session variables
+session_unset();
+
+// (iii) session_destroy() - Destroys the session
+session_destroy();
+
+echo &quot;Session functions executed.&quot;;
+
+?&gt;
+OUTPUT:
+Session functions executed.
