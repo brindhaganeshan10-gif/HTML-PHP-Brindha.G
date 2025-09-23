@@ -1,0 +1,18 @@
+68) Construct a PHP script that catches a division by zero error using try-catch.
+&lt;?php
+try {
+$numerator = 10;
+$denominator = 0;
+if ($denominator == 0) {
+throw new DivisionByZeroError(&quot;Cannot divide by zero!&quot;);
+}
+$result = $numerator / $denominator;
+echo &quot;Result: $result&quot;;
+
+} catch (DivisionByZeroError $e) {
+
+echo &quot;Error: &quot; . $e-&gt;getMessage();
+}
+?&gt;
+OUTPUT:
+Error: Cannot divide by zero!
