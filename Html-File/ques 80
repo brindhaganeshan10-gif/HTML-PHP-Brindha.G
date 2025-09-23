@@ -1,0 +1,14 @@
+80. Build a test cookie with the setcookie( ) function using PHP.
+
+&lt;?php
+setcookie(&quot;test_cookie&quot;, &quot;cookie_value&quot;, time() + (86400 * 30), &quot;/&quot;);
+
+if(isset($_COOKIE[&quot;test_cookie&quot;])) {
+echo &quot;Cookie &#39;test_cookie&#39; is set: &quot; . $_COOKIE[&quot;test_cookie&quot;];
+
+} else {
+echo &quot;Cookie &#39;test_cookie&#39; is not set.&quot;;
+}
+?&gt;
+output:
+Cookie &#39;test_cookie&#39; is set: cookie_value
