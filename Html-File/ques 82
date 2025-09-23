@@ -1,0 +1,13 @@
+82. Implement the setcookie( ) function with various arguments using the PHP program
+&lt;?php
+setcookie(&quot;user&quot;, &quot;Dharani&quot;, time() + (86400 * 30), &quot;/&quot;, &quot;example.com&quot;, true, true);
+
+if(isset($_COOKIE[&quot;user&quot;])) {
+
+echo &quot;Cookie value: &quot; . $_COOKIE[&quot;user&quot;];
+} else {
+echo &quot;Cookie not set.&quot;;
+}
+?&gt;
+output:
+Cookie value: Dharani
