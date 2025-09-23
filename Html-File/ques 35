@@ -1,0 +1,17 @@
+35) Write a PHP script using an array that checks if a string contains another string and displays the
+result.
+&lt;?php
+$mainString = &quot;PHP is a powerful scripting language for web development.&quot;;
+$searchWords = array(&quot;PHP&quot;, &quot;Java&quot;, &quot;web&quot;, &quot;python&quot;);
+foreach ($searchWords as $word) {
+
+if (strpos($mainString, $word) !== false) {
+echo &quot;The string contains &#39;$word&#39;.&lt;br&gt;&quot;;
+} else {
+echo &quot;The string does NOT contain &#39;$word&#39;.&lt;br&gt;&quot;;
+}
+}
+?&gt;
+OUTPUT:
+The string contains &#39;PHP&#39;.&lt;br&gt;The string does NOT contain &#39;Java&#39;.&lt;br&gt;The string contains
+&#39;web&#39;.&lt;br&gt;The string does NOT contain &#39;python&#39;.&lt;br&gt;
