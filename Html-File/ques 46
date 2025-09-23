@@ -1,0 +1,13 @@
+46) Write a PHP program to find the index of a specific value in an array.
+&lt;?php
+$fruits = array(&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;, &quot;mango&quot;, &quot;orange&quot;);
+$search = &quot;mango&quot;;
+$index = array_search($search, $fruits);
+if ($index !== false) {
+echo &quot;The value &#39;$search&#39; is found at index: $index&quot;;
+} else {
+echo &quot;The value &#39;$search&#39; is not found in the array.&quot;;
+}
+?&gt;
+OUTPUT:
+The value &#39;mango&#39; is found at index: 3
