@@ -1,0 +1,61 @@
+10. Develop a program to check student grades based on marks using a loop.
+&lt;?php
+$marks = [85, 72, 60, 48, 30];
+
+for ($i = 0; $i &lt; count($marks); $i++) {
+$mark = $marks[$i];
+
+echo &quot;Student &quot; . ($i + 1) . &quot;: Marks = $mark, Grade = &quot;;
+
+if ($mark &gt;= 80) {
+echo &quot;A&quot;;
+} elseif ($mark &gt;= 60) {
+echo &quot;B&quot;;
+} elseif ($mark &gt;= 40) {
+echo &quot;C&quot;;
+} else {
+
+echo &quot;Fail&lt;br&gt;&quot;;
+}
+}
+?&gt;
+
+output:
+Student 1: Marks = 85, Grade = A
+Student 2: Marks = 72, Grade = B
+Student 3: Marks = 60, Grade = B
+Student 4: Marks = 48, Grade = C
+Student 5: Marks = 30, Grade = Fail
+
+11. Develop a PHP program to show days of the week using switch cases.
+&lt;?php
+$dayNumber = 3;
+
+switch ($dayNumber) {
+case 1:
+echo &quot;Sunday&quot;;
+break;
+case 2:
+echo &quot;Monday&quot;;
+break;
+case 3:
+echo &quot;Tuesday&quot;;
+break;
+case 4:
+echo &quot;Wednesday&quot;;
+break;
+case 5:
+echo &quot;Thursday&quot;;
+
+break;
+case 6:
+echo &quot;Friday&quot;;
+break;
+case 7:
+echo &quot;Saturday&quot;;
+break;
+default:
+echo &quot;Invalid day number!&quot;;
+}
+?&gt;
+output: tuesday
