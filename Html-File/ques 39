@@ -1,0 +1,51 @@
+39) A school wants to automate the calculation of student grades. Design a system that allows
+teachers to input
+student scores, calculates their grades, and generates a summary report. How would you utilize
+arrays and
+array functions to store and process the student data effectively?
+&lt;?php
+$students = array(
+&quot;Alice&quot; =&gt; 85,
+&quot;Bob&quot; =&gt; 72,
+&quot;Charlie&quot; =&gt; 90,
+&quot;David&quot; =&gt; 65,
+&quot;Eva&quot; =&gt; 50
+);
+function getGrade($score) {
+if ($score &gt;= 90) return &quot;A&quot;;
+elseif ($score &gt;= 80) return &quot;B&quot;;
+elseif ($score &gt;= 70) return &quot;C&quot;;
+elseif ($score &gt;= 60) return &quot;D&quot;;
+else return &quot;F&quot;;
+}
+echo &quot;&lt;h3&gt;Student Grade Report&lt;/h3&gt;&quot;;
+foreach ($students as $name =&gt; $score) {
+$grade = getGrade($score);
+echo &quot;$name - Score: $score - Grade: $grade &lt;br&gt;&quot;;
+}
+$totalStudents = count($students);
+$totalScore = array_sum($students);
+$average = $totalScore / $totalStudents;
+$highest = max($students);
+$lowest = min($students);
+$topper = array_keys($students, $highest);
+
+echo &quot;&lt;h3&gt;Summary&lt;/h3&gt;&quot;;
+echo &quot;Total Students: $totalStudents &lt;br&gt;&quot;;
+echo &quot;Average Score: $average &lt;br&gt;&quot;;
+echo &quot;Highest Score: $highest (Topper: &quot; . implode(&quot;, &quot;, $topper) . &quot;)&lt;br&gt;&quot;;
+echo &quot;Lowest Score: $lowest &lt;br&gt;&quot;;
+?&gt;
+OUTPUT:
+Student Grade Report
+Alice - Score: 85 - Grade: B
+Bob - Score: 72 - Grade: C
+Charlie - Score: 90 - Grade: A
+David - Score: 65 - Grade: D
+Eva - Score: 50 - Grade: F
+
+Summary
+Total Students: 5
+Average Score: 72.4
+Highest Score: 90 (Topper: Charlie)
+Lowest Score: 50
