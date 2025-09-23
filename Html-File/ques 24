@@ -1,0 +1,53 @@
+24. Write a PHP script to manipulate the strings with all the string functions.
+&lt;?php
+$str = &quot; Hello World! Welcome to PHP. &quot;;
+
+// Remove extra spaces
+$trimmed = trim($str);
+
+// Convert to lowercase and uppercase
+$lower = strtolower($trimmed);
+$upper = strtoupper($trimmed);
+
+// String length
+$length = strlen($trimmed);
+
+// Word count
+$wordCount = str_word_count($trimmed);
+
+// Replace a word
+$replaced = str_replace(&quot;World&quot;, &quot;Friend&quot;, $trimmed);
+
+// Reverse the string
+$reversed = strrev($trimmed);
+
+// Find position of a word
+$pos = strpos($trimmed, &quot;PHP&quot;);
+
+// Substring
+$sub = substr($trimmed, 6, 5);
+
+// Display results neatly
+echo &quot;Original: &#39;$str&#39;\n&quot;;
+echo &quot;Trimmed: &#39;$trimmed&#39;\n&quot;;
+echo &quot;Lowercase: $lower\n&quot;;
+echo &quot;Uppercase: $upper\n&quot;;
+echo &quot;Length: $length\n&quot;;
+echo &quot;Word count: $wordCount\n&quot;;
+echo &quot;Replace: $replaced\n&quot;;
+echo &quot;Reversed: $reversed\n&quot;;
+echo &quot;Position of &#39;PHP&#39;: $pos\n&quot;;
+echo &quot;Substring: $sub\n&quot;;
+?&gt;
+
+output:
+Original: &#39; Hello World! Welcome to PHP. &#39;
+Trimmed: &#39;Hello World! Welcome to PHP.&#39;
+Lowercase: hello world! welcome to php.
+Uppercase: HELLO WORLD! WELCOME TO PHP.
+Length: 28
+Word count: 5
+Replace: Hello Friend! Welcome to PHP.
+Reversed: .PHP ot emocleW !dlroW olleH
+Position of &#39;PHP&#39;: 24
+Substring: World
